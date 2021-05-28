@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Page Not Found</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <style>
-
     :root {
       --gray-1: #333333;
       --gray-2: #4F4F4F;
       --gray-3: #BDBDBD;
     }
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
     }
 
     img {
       max-width: 100%;
     }
 
-    html {
-      background-color: transparent;
+    a {
+      text-decoration: none;
     }
+
 
     body {
       font-family: "Space Mono", sans-serif;
-      padding: 1.25rem 1px 1.25rem 1.5rem;
+      padding: 1.25rem 1px;
       display: flex;
       flex-direction: column;
-      height: 949px;
-      border-radius: 0.5rem;
       color: var(--gray-1);
+    }
+
+    .page {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
     }
 
     .header__title {
@@ -45,18 +60,22 @@
       margin-bottom: 3rem;
       font-size: 1.5rem;
       letter-spacing: -2px;
-    }
-
-    .footer__container {
-      text-align: center;
-    }
-
-    .image__container {
-      padding: 10vw;
+      padding-left: 1.25rem;
     }
 
     .main__container {
       flex: 1;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .image__container {
+      width: 287px;
+      margin: auto;
+    }
+
+    .content__container {
+      padding-left: 1.25rem;
     }
 
     .content__title {
@@ -71,6 +90,8 @@
       color: var(--gray-2);
       line-height: 26.66px;
       margin-bottom: 4.125rem;
+      width: 328px;
+      letter-spacing: -0.035em;
     }
 
     .content__btn {
@@ -80,7 +101,14 @@
       color: white;
       text-transform: uppercase;
       border: none;
-      letter-spacing: -1px;
+      letter-spacing: -0.035em;
+      word-spacing: 0.4rem;
+      line-height: 21px;  
+      font-size: 14px;            
+    }
+
+    .content__btn a {
+      color: white;
     }
 
     .footer__container {
@@ -88,22 +116,75 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       color: var(--gray-3);
+      text-align: center;
+      flex-shrink: 0;
     }
 
-    a {
+    .footer__container a {
       text-decoration: none;
       font-weight: 700;
       color: var(--gray-3);
     }
-    }
 
+    @media screen and (min-width: 40em) {
+
+      body {
+        height: 1080px;
+      }
+
+      .header__title {
+        padding: 1.75rem 4rem;
+      }
+
+      .main__container {
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        padding-bottom: 12rem;
+      }
+
+      .content__title {
+        font-size: 4rem;
+        line-height: 95px;
+        width: 586px;
+      }
+
+      .content__text {
+        font-size: 1.5rem;
+        width: 382px;
+        line-height: 36px;
+      }
+
+      .image__container {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        width: 540px;
+
+      }
+
+      .image__container img {
+        width: 34rem;
+      }
+
+      .content__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 3rem;
+        width: 586px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header class="header__title">
-    404 Not Found
-  </header>
-  <main class="main__container">
+  <section class="page">
+    <header class="header__title">
+      404 Not Found
+    </header>
+    <main class="main__container">
     <div class="image__container">
       <img src="./Scarecrow.png" alt="illustration of scarecrow">
     </div>
@@ -111,13 +192,15 @@
       <h1 class="content__title">I have bad news for you</h1>
       <p class="content__text">The page you are looking for might be removed or is temporarily unavailable</p>
       <button class="content__btn">
-        back to homepage
+        <a href="index.html">back to homepage</a>
       </button>
     </div>
-  </main>
+    </main>
+  </section>
   <footer class="footer__container">
-    
+
     created by <a href="https://github.com/cynthiateeters">cynthiateeters</a> - devChallenges.io
   </footer>
 </body>
+
 </html>
