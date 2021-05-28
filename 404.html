@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --gray-1: #333333;
+      --gray-2: #4F4F4F;
+      --gray-3: #BDBDBD;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    html {
+      background-color: transparent;
+    }
+
+    body {
+      font-family: "Space Mono", sans-serif;
+      padding: 1.25rem 1px 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 949px;
+      border-radius: 0.5rem;
+      color: var(--gray-1);
+    }
+
+    .header__title {
+      font-family: "Inconsolata";
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      font-size: 1.5rem;
+      letter-spacing: -2px;
+    }
+
+    .footer__container {
+      text-align: center;
+    }
+
+    .image__container {
+      padding: 10vw;
+    }
+
+    .main__container {
+      flex: 1;
+    }
+
+    .content__title {
+      font-size: 3rem;
+      word-spacing: -0.5rem;
+      line-height: 71.09px;
+      margin-bottom: 1.875rem;
+    }
+
+    .content__text {
+      font-size: 1.125rem;
+      color: var(--gray-2);
+      line-height: 26.66px;
+      margin-bottom: 4.125rem;
+    }
+
+    .content__btn {
+      width: 216px;
+      height: 68px;
+      background-color: var(--gray-1);
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      letter-spacing: -1px;
+    }
+
+    .footer__container {
+      font-size: 0.875rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: var(--gray-3);
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--gray-3);
+    }
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header__title">
+    404 Not Found
+  </header>
+  <main class="main__container">
+    <div class="image__container">
+      <img src="./Scarecrow.png" alt="illustration of scarecrow">
+    </div>
+    <div class="content__container">
+      <h1 class="content__title">I have bad news for you</h1>
+      <p class="content__text">The page you are looking for might be removed or is temporarily unavailable</p>
+      <button class="content__btn">
+        back to homepage
+      </button>
+    </div>
+  </main>
+  <footer class="footer__container">
+    
+    created by <a href="https://github.com/cynthiateeters">cynthiateeters</a> - devChallenges.io
+  </footer>
+</body>
+</html>
